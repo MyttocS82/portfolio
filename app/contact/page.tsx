@@ -59,58 +59,88 @@ export default function ContactPage() {
 
             </section>
 
-            {/* Formulaire */}
+            {/* Formulaire Formspree */}
             <section className="bg-white border rounded-lg p-8 max-w-3xl mx-auto space-y-6">
 
                 <h2 className="text-xl font-semibold text-center">
                     Formulaire de contact
                 </h2>
 
-                <form className="space-y-4">
+                <form
+                    action="https://formspree.io/f/xaqqyaaa"
+                    method="POST"
+                    className="space-y-4"
+                >
+
+                    {/* Sujet du mail */}
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="Nouveau message depuis le portfolio"
+                    />
+
+                    {/* Nom */}
                     <div>
-                        <label className="block text-sm font-medium mb-1">
+                        <label htmlFor="name" className="block text-sm font-medium mb-1">
                             Nom
                         </label>
                         <input
+                            id="name"
                             type="text"
+                            name="name"
+                            required
+                            aria-required="true"
                             placeholder="Votre nom"
                             className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                     </div>
 
+                    {/* Email */}
                     <div>
-                        <label className="block text-sm font-medium mb-1">
+                        <label htmlFor="email" className="block text-sm font-medium mb-1">
                             Email
                         </label>
                         <input
+                            id="email"
                             type="email"
+                            name="email"
+                            required
+                            aria-required="true"
                             placeholder="votre.email@example.com"
                             className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                     </div>
 
+                    {/* Message */}
                     <div>
-                        <label className="block text-sm font-medium mb-1">
+                        <label htmlFor="message" className="block text-sm font-medium mb-1">
                             Message
                         </label>
                         <textarea
-                            rows={4}
+                            id="message"
+                            name="message"
+                            rows={5}
+                            required
+                            aria-required="true"
                             placeholder="Votre message"
                             className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                     </div>
 
+                    {/* Bouton */}
+                    <input type="text" name="_gotcha" className="hidden"/>
                     <button
                         type="submit"
                         className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
                     >
                         Envoyer le message
                     </button>
+
                 </form>
 
                 <p className="text-sm text-gray-500 text-center">
-                    Ce formulaire est une interface de démonstration et ne transmet pas
-                    encore les messages.
+                    Les messages envoyés via ce formulaire sont transmis directement par email.<br/>
+                    Je tâcherai à vous répondre dans les plus brefs délais !
                 </p>
 
             </section>
