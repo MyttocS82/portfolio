@@ -57,7 +57,8 @@ export default function HomePage() {
                     ].map(skill => (
                         <div
                             key={skill}
-                            className="p-4 bg-white rounded-lg shadow-sm border text-sm md:text-base"
+                            className="p-4 bg-white rounded-lg shadow-sm border text-sm md:text-base
+                                        transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
                         >
                             {skill}
                         </div>
