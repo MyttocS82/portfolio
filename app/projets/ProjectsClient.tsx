@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import {useState} from 'react';
+import Card from '@/components/Card';
 
 /* =========================
    Types
@@ -28,7 +29,7 @@ const projects: Project[] = [
             'Analyse et visualisation sous Power BI',
             'Conception d’un modèle de prédiction du NutriScore',
         ],
-        tags: ['Data', 'BI', 'IA', 'Travail en équipe'],
+        tags: ['Data', 'BI', 'IA'],
     },
     {
         title: 'Stage ATR – Gestion de base de données',
@@ -39,7 +40,7 @@ const projects: Project[] = [
             'Conception et administration de la base de données',
             'Développement d’une application de gestion',
         ],
-        tags: ['Data', 'Base de données', 'Projet professionnel'],
+        tags: ['Base de données', 'Projet professionnel'],
     },
     {
         title: 'Nuit de l’Info 2025',
@@ -60,13 +61,13 @@ const projects: Project[] = [
 ========================= */
 
 const tagStyles: Record<string, string> = {
-    Data: 'bg-blue-100 text-blue-700',
-    BI: 'bg-green-100 text-green-700',
-    IA: 'bg-purple-100 text-purple-700',
-    'Base de données': 'bg-indigo-100 text-indigo-700',
-    'Projet professionnel': 'bg-yellow-100 text-yellow-700',
-    'Développement web': 'bg-red-100 text-red-700',
-    'Travail en équipe': 'bg-gray-100 text-gray-700',
+    Data: 'bg-blue-50 text-blue-700 border border-blue-200',
+    BI: 'bg-green-50 text-green-700 border border-green-200',
+    IA: 'bg-purple-50 text-purple-700 border border-purple-200',
+    'Base de données': 'bg-indigo-50 text-indigo-700 border border-indigo-200',
+    'Projet professionnel': 'bg-yellow-50 text-yellow-700 border border-yellow-200',
+    'Développement web': 'bg-red-50 text-red-700 border border-red-200',
+    'Travail en équipe': 'bg-slate-100 text-slate-700 border border-slate-200',
 };
 
 /* =========================
@@ -94,11 +95,11 @@ export default function ProjectsClient() {
             <section className="flex flex-wrap justify-center gap-3">
                 <button
                     onClick={() => setActiveTag(null)}
-                    className={`px-4 py-2 rounded-full border text-sm transition
+                    className={`px-4 py-2 rounded-full text-sm font-medium border transition
             ${
                         activeTag === null
                             ? 'bg-blue-600 text-white border-blue-600'
-                            : 'bg-white text-gray-700 hover:bg-gray-100'
+                            : 'bg-white text-slate-700 hover:bg-slate-100'
                     }`}
                 >
                     Tous
@@ -108,11 +109,11 @@ export default function ProjectsClient() {
                     <button
                         key={tag}
                         onClick={() => setActiveTag(tag)}
-                        className={`px-4 py-2 rounded-full border text-sm transition
+                        className={`px-4 py-2 rounded-full text-sm font-medium border transition
               ${
                             activeTag === tag
                                 ? 'bg-blue-600 text-white border-blue-600'
-                                : 'bg-white text-gray-700 hover:bg-gray-100'
+                                : 'bg-white text-slate-700 hover:bg-slate-100'
                         }`}
                     >
                         {tag}
@@ -123,39 +124,11 @@ export default function ProjectsClient() {
             {/* Grille de projets */}
             <section className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {filteredProjects.map((project) => (
-                    <article
+                    <Card
                         key={project.title}
-                        className="bg-white border rounded-xl p-6 flex flex-col justify-between hover:shadow-lg transition"
-                    >
-                        <div className="space-y-4">
-                            <h2 className="text-xl font-semibold">{project.title}</h2>
-
-                            <p className="text-gray-700 text-sm">
-                                {project.description}
-                            </p>
-
-                            <ul className="text-sm text-gray-600 list-disc list-inside">
-                                {project.details.map((detail) => (
-                                    <li key={detail}>{detail}</li>
-                                ))}
-                            </ul>
-
-                            <div className="flex flex-wrap gap-2 pt-2">
-                                {project.tags.map((tag) => (
-                                    <span
-                                        key={tag}
-                                        className={`px-3 py-1 text-xs rounded-full ${
-                                            tagStyles[tag] ?? 'bg-gray-100 text-gray-700'
-                                        }`}
-                                    >
-                    {tag}
-                  </span>
-                                ))}
-                            </div>
-                        </div>
-
-                        {project.link && (
-                            <div className="pt-4">
+                        title={project.title}
+                        footer={
+                            project.link && (
                                 <a
                                     href={project.link}
                                     target="_blank"
@@ -164,9 +137,30 @@ export default function ProjectsClient() {
                                 >
                                     Voir le site →
                                 </a>
-                            </div>
-                        )}
-                    </article>
+                            )
+                        }
+                    >
+                        <p>{project.description}</p>
+
+                        <ul className="list-disc list-inside">
+                            {project.details.map((detail) => (
+                                <li key={detail}>{detail}</li>
+                            ))}
+                        </ul>
+
+                        <div className="flex flex-wrap gap-2 pt-2">
+                            {project.tags.map((tag) => (
+                                <span
+                                    key={tag}
+                                    className={`px-3 py-1 text-xs font-medium rounded-full ${
+                                        tagStyles[tag] ?? 'bg-slate-100 text-slate-700 border border-slate-200'
+                                    }`}
+                                >
+                  {tag}
+                </span>
+                            ))}
+                        </div>
+                    </Card>
                 ))}
             </section>
         </>
