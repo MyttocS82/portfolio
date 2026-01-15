@@ -101,6 +101,17 @@ export default function HomePage() {
                 </Link>
             </section>
 
+            {/* Conclusion */}
+            <section className="text-center space-y-4">
+                <p className="text-sm text-slate-600 max-w-6xl mx-auto">
+                    Ce portfolio a été réalisé dans le cadre de ma formation en BUT Informatique,
+                    parcours Administration, Gestion et Exploitation des Données (AGED). Il présente
+                    les compétences et projets que j’ai développés, et s’inscrit dans une démarche
+                    de poursuite d’études en master, en alternance.
+                </p>
+            </section>
+
+
         </section>
     );
 }
