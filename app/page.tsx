@@ -6,9 +6,13 @@ export default function HomePage() {
 
             {/* Hero */}
             <section className="text-center space-y-6">
-                <h1 className="text-4xl md:text-5xl font-bold">
+                <h1 className="text-4xl md:text-6xl font-bold">
                     Bonjour, je suis <span className="text-blue-600">Scott Michelon</span>
                 </h1>
+                <p className="text-sm uppercase tracking-widest text-slate-500">
+                    Data • Business Intelligence • Intelligence Artificielle
+                </p>
+
                 <p className="text-lg text-slate-600 max-w-3xl mx-auto">
                     Étudiant en BUT Informatique, parcours Administration, Gestion et Exploitation des Données (AGED),
                     je m’intéresse particulièrement aux problématiques liées aux bases de données, à la Business
@@ -48,23 +52,25 @@ export default function HomePage() {
                 <h2 className="text-2xl font-semibold text-center">Compétences clés</h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                     {[
-                        'Bases de données',
-                        'SQL',
-                        'Modélisation de données',
-                        'Business Intelligence',
-                        'Analyse de données',
-                        'Python',
-                        'IA & Data Science',
-                        'Git'
+                        { name: 'Bases de données', detail: 'Conception, optimisation, sécurité' },
+                        { name: 'SQL', detail: 'Requêtes avancées, agrégations' },
+                        { name: 'Modélisation', detail: 'MCD, MLD, schémas relationnels' },
+                        { name: 'Business Intelligence', detail: 'Tableaux de bord, indicateurs' },
+                        { name: 'Analyse de données', detail: 'Exploration, interprétation' },
+                        { name: 'Python', detail: 'Traitement et analyse de données' },
+                        { name: 'IA & Data Science', detail: 'Notions de ML, analyse prédictive' },
+                        { name: 'Git', detail: 'Travail collaboratif' },
                     ].map(skill => (
                         <div
-                            key={skill}
-                            className="p-4 bg-white rounded-lg shadow-sm border text-sm md:text-base
-                                        transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                            key={skill.name}
+                            className="p-5 bg-white rounded-xl border shadow-sm
+               transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
                         >
-                            {skill}
+                            <h3 className="font-semibold">{skill.name}</h3>
+                            <p className="text-sm text-slate-500 mt-1">{skill.detail}</p>
                         </div>
                     ))}
+
                 </div>
             </section>
 
@@ -87,7 +93,8 @@ export default function HomePage() {
             </section>
 
             {/* Call to Action */}
-            <section className="text-center space-y-4">
+            <section
+                className="text-center space-y-4 bg-slate-50 border rounded-2xl p-10 border-gray-300 transition-all duration-300 hover:shadow-xl">
                 <h2 className="text-2xl font-semibold">Travaillons ensemble</h2>
                 <p className="text-slate-600">
                     Je suis ouvert aux opportunités d’alternance ou de projet en
