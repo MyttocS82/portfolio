@@ -12,6 +12,7 @@ type Project = {
     description: string;
     details: string[];
     tags: string[];
+    role: string;
     link?: string;
 };
 
@@ -29,6 +30,7 @@ const projects: Project[] = [
             'Analyse et visualisation sous Power BI',
             'Conception d’un modèle de prédiction du NutriScore',
         ],
+        role: 'analyse des données, conception et administration de base de données, nettoyage et transformation des données, conception de visualisations',
         tags: ['Data', 'BI', 'IA'],
     },
     {
@@ -40,6 +42,7 @@ const projects: Project[] = [
             'Conception et administration de la base de données',
             'Développement d’une application de gestion',
         ],
+        role: 'analyse du besoin, conception et administration de base de données, développement d’outils de production',
         tags: ['Base de données', 'Projet professionnel'],
     },
     {
@@ -51,6 +54,7 @@ const projects: Project[] = [
             'Travail en équipe et gestion du temps',
             'Utilisation de Git et GitHub',
         ],
+        role: 'développement web, intégration frontend, collaboration en équipe et gestion du code source',
         tags: ['Développement web', 'Travail en équipe'],
         link: 'https://nuit-info-2025-delta.vercel.app/',
     },
@@ -147,6 +151,10 @@ export default function ProjectsClient() {
                                 <li key={detail}>{detail}</li>
                             ))}
                         </ul>
+
+                        <p className="text-sm text-slate-500">
+                            <strong>Rôle :</strong> {project.role}
+                        </p>
 
                         <div className="flex flex-wrap gap-2 pt-2">
                             {project.tags.map((tag) => (

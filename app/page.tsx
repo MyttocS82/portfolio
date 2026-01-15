@@ -10,9 +10,11 @@ export default function HomePage() {
                     Bonjour, je suis <span className="text-blue-600">Scott Michelon</span>
                 </h1>
                 <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-                    Étudiant en BUT Informatique, spécialisé en Administration, Gestion et
-                    Exploitation des Données (AGED), avec un fort intérêt pour les bases de
-                    données, la Business Intelligence et l’intelligence artificielle.
+                    Étudiant en BUT Informatique, parcours Administration, Gestion et Exploitation des Données (AGED),
+                    je m’intéresse particulièrement aux problématiques liées aux bases de données, à la Business
+                    Intelligence, à l’analyse de données et à l'Intelligence Artificielle. <br/>
+                    J’apprécie travailler sur des projets concrets, depuis la compréhension du besoin jusqu’à
+                    l’exploitation des données pour en extraire de la valeur
                 </p>
                 <div className="flex justify-center gap-4">
                     <Link
@@ -88,7 +90,7 @@ export default function HomePage() {
             <section className="text-center space-y-4">
                 <h2 className="text-2xl font-semibold">Travaillons ensemble</h2>
                 <p className="text-slate-600">
-                    Je suis ouvert aux opportunités de stage, d’alternance ou de projet en
+                    Je suis ouvert aux opportunités d’alternance ou de projet en
                     lien avec les données, la BI ou l’intelligence artificielle.
                 </p>
                 <Link
