@@ -9,7 +9,7 @@ export default function HomePage() {
                 <h1 className="text-4xl md:text-5xl font-bold">
                     Bonjour, je suis <span className="text-blue-600">Scott Michelon</span>
                 </h1>
-                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                <p className="text-lg text-slate-600 max-w-3xl mx-auto">
                     Étudiant en BUT Informatique, spécialisé en Administration, Gestion et
                     Exploitation des Données (AGED), avec un fort intérêt pour les bases de
                     données, la Business Intelligence et l’intelligence artificielle.
@@ -33,7 +33,7 @@ export default function HomePage() {
             {/* À propos */}
             <section className="space-y-4 max-w-4xl mx-auto text-center">
                 <h2 className="text-2xl font-semibold">À propos</h2>
-                <p className="text-gray-600">
+                <p className="text-slate-600">
                     Je m’intéresse particulièrement à la conception et à l’optimisation de
                     bases de données, à l’analyse et à la valorisation des données via des
                     outils de Business Intelligence, ainsi qu’aux applications de
@@ -68,7 +68,7 @@ export default function HomePage() {
             {/* Projets */}
             <section className="space-y-6">
                 <h2 className="text-2xl font-semibold text-center">Projets</h2>
-                <p className="text-center text-gray-600 max-w-3xl mx-auto">
+                <p className="text-center text-slate-600 max-w-3xl mx-auto">
                     Mes projets académiques et personnels portent principalement sur la
                     gestion de bases de données, l’analyse de données et la mise en place
                     de solutions orientées décisionnel et intelligence artificielle.
@@ -86,7 +86,7 @@ export default function HomePage() {
             {/* Call to Action */}
             <section className="text-center space-y-4">
                 <h2 className="text-2xl font-semibold">Travaillons ensemble</h2>
-                <p className="text-gray-600">
+                <p className="text-slate-600">
                     Je suis ouvert aux opportunités de stage, d’alternance ou de projet en
                     lien avec les données, la BI ou l’intelligence artificielle.
                 </p>

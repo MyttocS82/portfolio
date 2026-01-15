@@ -125,7 +125,7 @@ export default function ProjectsClient() {
                 {filteredProjects.map((project) => (
                     <article
                         key={project.title}
-                        className="bg-white border rounded-xl p-6 flex flex-col justify-between hover:shadow-lg transition"
+                        className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition"
                     >
                         <div className="space-y-4">
                             <h2 className="text-xl font-semibold">{project.title}</h2>
