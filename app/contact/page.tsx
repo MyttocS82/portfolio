@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import ContactForm from './ContactForm';
+import {Suspense} from "react";
 
 export const metadata: Metadata = {
     title: 'Contact | Portfolio Michelon Scott',
@@ -42,7 +43,9 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            <ContactForm/>
+            <Suspense fallback={null}>
+                <ContactForm/>
+            </Suspense>
 
         </section>
     );
