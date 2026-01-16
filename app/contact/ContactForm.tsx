@@ -1,10 +1,33 @@
 'use client';
 
-import {useSearchParams} from 'next/navigation';
+import {useState} from 'react';
 
 export default function ContactForm() {
-    const searchParams = useSearchParams();
-    const sent = searchParams.get('sent');
+    const [sent, setSent] = useState(false);
+    const [loading, setLoading] = useState(false);
+
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        setLoading(true);
+
+        const form = e.currentTarget;
+        const formData = new FormData(form);
+
+        const response = await fetch('https://formspree.io/f/xaqqyaaa', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                Accept: 'application/json',
+            },
+        });
+
+        setLoading(false);
+
+        if (response.ok) {
+            form.reset();        // ✅ vide les champs
+            setSent(true);       // ✅ affiche le message
+        }
+    }
 
     return (
         <section className="bg-white border rounded-lg p-8 max-w-3xl mx-auto space-y-6">
@@ -19,8 +42,7 @@ export default function ContactForm() {
             )}
 
             <form
-                action="https://formspree.io/f/xaqqyaaa"
-                method="POST"
+                onSubmit={handleSubmit}
                 className="space-y-4"
             >
                 {/* Champs cachés */}
@@ -34,14 +56,10 @@ export default function ContactForm() {
                     name="_source"
                     value="Portfolio Scott MICHELON"
                 />
-                <input
-                    type="hidden"
-                    name="_redirect"
-                    value="https://portfolio-michelon-scott.vercel.app/contact?sent=true"
-                />
-
                 <input type="text" name="_gotcha" className="hidden"/>
 
+
+                {/* Champs à remplir par l'user */}
                 <div>
                     <label className="block text-sm font-medium mb-1">Nom</label>
                     <input
@@ -76,9 +94,10 @@ export default function ContactForm() {
 
                 <button
                     type="submit"
+                    disabled={loading}
                     className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
                 >
-                    Envoyer le message
+                    {loading ? 'Envoi...' : 'Envoyer le message'}
                 </button>
             </form>
 
