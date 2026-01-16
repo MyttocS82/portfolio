@@ -1,0 +1,25 @@
+import './globals.css';
+import {ReactNode} from 'react';
+import type {Metadata} from "next";
+
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+
+export const metadata: Metadata = {
+    title: 'Portfolio Michelon Scott',
+    description: 'Portfolio personnel de Michelon Scott',
+};
+
+export default function RootLayout({children}: { children: ReactNode }) {
+    return (
+        <html lang="fr">
+        <body className="bg-gray-50 text-gray-800 antialiased">
+        <Navbar/>
+        <main className="min-h-screen">
+            {children}
+        </main>
+        <Footer/>
+        </body>
+        </html>
+    );
+}
