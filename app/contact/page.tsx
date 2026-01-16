@@ -71,6 +71,22 @@ export default function ContactPage() {
                     method="POST"
                     className="space-y-4"
                 >
+                    {/* Champs cachés */}
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="[Portfolio] Nouveau message de contact"
+                    />
+                    <input
+                        type="hidden"
+                        name="_source"
+                        value="Portfolio Scott MICHELON"
+                    />
+                    <input
+                        type="hidden"
+                        name="_redirect"
+                        value="https://portfolio-michelon-scott.vercel.app/contact?sent=true"
+                    />
 
                     {/* Sujet du mail */}
                     <input
