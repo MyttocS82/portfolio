@@ -52,14 +52,14 @@ export default function HomePage() {
                 <h2 className="text-2xl font-semibold text-center">Compétences clés</h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                     {[
-                        { name: 'Bases de données', detail: 'Conception, optimisation, sécurité' },
-                        { name: 'SQL', detail: 'Requêtes avancées, agrégations' },
-                        { name: 'Modélisation', detail: 'MCD, MLD, schémas relationnels' },
-                        { name: 'Business Intelligence', detail: 'Tableaux de bord, indicateurs' },
-                        { name: 'Analyse de données', detail: 'Exploration, interprétation' },
-                        { name: 'Python', detail: 'Traitement et analyse de données' },
-                        { name: 'IA & Data Science', detail: 'Notions de ML, analyse prédictive' },
-                        { name: 'Git', detail: 'Travail collaboratif' },
+                        {name: 'Bases de données', detail: 'Conception, optimisation, sécurité'},
+                        {name: 'SQL', detail: 'Requêtes avancées, agrégations'},
+                        {name: 'Modélisation', detail: 'MCD, MLD, schémas relationnels'},
+                        {name: 'Business Intelligence', detail: 'Tableaux de bord, indicateurs'},
+                        {name: 'Analyse de données', detail: 'Exploration, interprétation'},
+                        {name: 'Python', detail: 'Traitement et analyse de données'},
+                        {name: 'IA & Data Science', detail: 'Notions de ML, analyse prédictive'},
+                        {name: 'Git', detail: 'Travail collaboratif'},
                     ].map(skill => (
                         <div
                             key={skill.name}
@@ -117,7 +117,6 @@ export default function HomePage() {
                     de poursuite d’études en master, en alternance.
                 </p>
             </section>
-
 
         </section>
     );
