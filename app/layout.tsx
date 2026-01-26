@@ -8,6 +8,8 @@ import Footer from '../components/Footer';
 export const metadata: Metadata = {
     title: 'Portfolio Michelon Scott',
     description: 'Portfolio personnel de Michelon Scott',
+    verification: {google: 'Gtpd_DIHiYQ4PCB2_yT2J1wLGpaTzO5cWHQiGb17Xrg' +
+            ''}
 };
 
 export default function RootLayout({children}: { children: ReactNode }) {
