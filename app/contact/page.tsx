@@ -29,7 +29,7 @@ export default function ContactPage() {
                 </div>
                 <div className="bg-white border rounded-lg p-6 space-y-2 transition-all duration-300 hover:shadow-xl">
                     <h2 className="font-semibold">LinkedIn</h2>
-                    <a href="https://www.linkedin.com/in/michelon-scott-dev/" target="_blank" rel="noopener noreferrer"
+                    <a href="https://fr.linkedin.com/in/michelon-scott-dev" target="_blank" rel="noopener noreferrer"
                        className="text-blue-600 hover:underline">
                         Profil LinkedIn
                     </a>
