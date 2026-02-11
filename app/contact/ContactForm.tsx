@@ -24,13 +24,14 @@ export default function ContactForm() {
         setLoading(false);
 
         if (response.ok) {
-            form.reset();        // ✅ vide les champs
-            setSent(true);       // ✅ affiche le message
+            form.reset();
+            setSent(true);
         }
     }
 
     return (
-        <section className="bg-white border rounded-lg p-8 max-w-3xl mx-auto space-y-6">
+        <section
+            className="bg-white border rounded-lg p-8 max-w-3xl mx-auto space-y-6 dark:bg-gray-700 dark:border-slate-700">
             <h2 className="text-xl font-semibold text-center">
                 Formulaire de contact
             </h2>
@@ -101,7 +102,7 @@ export default function ContactForm() {
                 </button>
             </form>
 
-            <p className="text-sm text-gray-500 text-center">
+            <p className="text-sm text-gray-500 text-center dark:text-slate-300">
                 Les messages envoyés via ce formulaire sont transmis directement par email.<br/>
                 Je tâcherai à vous répondre dans les plus brefs délais !
             </p>

@@ -12,15 +12,15 @@ export default function CVPage() {
 
             <h1 className="text-3xl font-bold">Curriculum Vitae</h1>
 
-            <p className="text-gray-600">
+            <p className="text-gray-600 dark:text-slate-300">
                 Je propose deux versions de mon CV afin de m’adapter aux différents
                 contextes de recrutement.
             </p>
 
             {/* CV Design */}
-            <div className="bg-white border rounded-lg p-6 space-y-4">
+            <div className="bg-white border rounded-lg p-6 space-y-4 dark:bg-slate-700 dark:border-slate-700">
                 <h2 className="text-xl font-semibold">CV Design</h2>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-600 text-sm dark:text-slate-300">
                     Version esthétique conçue sous Canva, idéale pour une lecture humaine
                     et une présentation visuelle soignée.
                 </p>
@@ -35,9 +35,9 @@ export default function CVPage() {
             </div>
 
             {/* CV ATS */}
-            <div className="bg-white border rounded-lg p-6 space-y-4">
+            <div className="bg-white border rounded-lg p-6 space-y-4 dark:bg-slate-700 dark:border-slate-700">
                 <h2 className="text-xl font-semibold">CV ATS</h2>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-600 text-sm dark:text-slate-300">
                     Version simplifiée et optimisée pour les systèmes de suivi des
                     candidatures (ATS), favorisant la lisibilité et le parsing automatique.
                 </p>
@@ -45,7 +45,7 @@ export default function CVPage() {
                     href="/cv/CV_Scott_Michelon_ATS.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block px-5 py-3 border border-gray-300 rounded-lg hover:bg-gray-100 transition"
+                    className="inline-block px-5 py-3 border border-gray-300 rounded-lg hover:bg-gray-100 transition dark:hover:bg-gray-600"
                 >
                     Télécharger le CV ATS (PDF)
                 </a>
