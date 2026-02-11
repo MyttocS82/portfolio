@@ -9,11 +9,11 @@ export default function HomePage() {
                 <h1 className="text-4xl md:text-6xl font-bold">
                     Bonjour, je suis <span className="text-blue-600">Scott Michelon</span>
                 </h1>
-                <p className="text-sm uppercase tracking-widest text-slate-500">
+                <p className="text-sm uppercase tracking-widest text-slate-500 dark:text-slate-400">
                     Data • Business Intelligence • Intelligence Artificielle
                 </p>
 
-                <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+                <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
                     Étudiant en BUT Informatique, parcours Administration, Gestion et Exploitation des Données (AGED),
                     je m’intéresse particulièrement aux problématiques liées aux bases de données, à la Business
                     Intelligence, à l’analyse de données et à l'Intelligence Artificielle. <br/>
@@ -29,7 +29,7 @@ export default function HomePage() {
                     </Link>
                     <Link
                         href="/cv"
-                        className="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-100 transition"
+                        className="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-500 transition"
                     >
                         Voir mon CV
                     </Link>
@@ -39,7 +39,7 @@ export default function HomePage() {
             {/* À propos */}
             <section className="space-y-4 max-w-4xl mx-auto text-center">
                 <h2 className="text-2xl font-semibold">À propos</h2>
-                <p className="text-slate-600">
+                <p className="text-slate-600 dark:text-slate-300">
                     Je m’intéresse particulièrement à la conception et à l’optimisation de
                     bases de données, à l’analyse et à la valorisation des données via des
                     outils de Business Intelligence, ainsi qu’aux applications de
@@ -64,10 +64,11 @@ export default function HomePage() {
                         <div
                             key={skill.name}
                             className="p-5 bg-white rounded-xl border shadow-sm
-               transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+               transition-all duration-300 hover:shadow-xl hover:-translate-y-1
+               dark:bg-slate-800 dark:border-slate-800 dark:hover:bg-slate-700"
                         >
-                            <h3 className="font-semibold">{skill.name}</h3>
-                            <p className="text-sm text-slate-500 mt-1">{skill.detail}</p>
+                            <h3 className="font-semibold dark:text-slate-100">{skill.name}</h3>
+                            <p className="text-sm text-slate-500 mt-1 dark:text-slate-300">{skill.detail}</p>
                         </div>
                     ))}
 
@@ -77,7 +78,7 @@ export default function HomePage() {
             {/* Projets */}
             <section className="space-y-6">
                 <h2 className="text-2xl font-semibold text-center">Projets</h2>
-                <p className="text-center text-slate-600 max-w-3xl mx-auto">
+                <p className="text-center text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
                     Mes projets académiques et personnels portent principalement sur la
                     gestion de bases de données, l’analyse de données et la mise en place
                     de solutions orientées décisionnel et intelligence artificielle.
@@ -94,9 +95,9 @@ export default function HomePage() {
 
             {/* Call to Action */}
             <section
-                className="text-center space-y-4 bg-slate-50 border rounded-2xl p-10 border-gray-300 transition-all duration-300 hover:shadow-xl">
-                <h2 className="text-2xl font-semibold">Travaillons ensemble</h2>
-                <p className="text-slate-600">
+                className="text-center space-y-4 bg-slate-50 dark:bg-slate-700 dark:border-gray-700 border rounded-2xl p-10 border-gray-300 transition-all duration-300 hover:shadow-xl">
+                <h2 className="text-2xl font-semibold dark:text-slate-200">Travaillons ensemble</h2>
+                <p className="text-slate-600 dark:text-slate-300">
                     Je suis ouvert aux opportunités d’alternance ou de projet en
                     lien avec les données, la BI ou l’intelligence artificielle.
                 </p>

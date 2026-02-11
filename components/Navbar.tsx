@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import {useState} from 'react';
 import {usePathname} from 'next/navigation';
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
     {href: '/', label: 'Accueil'},
@@ -17,7 +18,7 @@ export default function Navbar() {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-300">
+        <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-300 dark:bg-slate-700 dark:border-gray-700">
             <nav className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
 
                 {/* Logo / Nom */}
@@ -34,8 +35,8 @@ export default function Navbar() {
                                 className={`text-sm font-medium transition
                   ${
                                     pathname === link.href
-                                        ? 'text-blue-600'
-                                        : 'text-gray-700 hover:text-blue-600'
+                                        ? 'text-blue-600 dark:text-blue-400'
+                                        : 'text-gray-700 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400'
                                 }`}
                             >
                                 {link.label}
@@ -43,6 +44,8 @@ export default function Navbar() {
                         </li>
                     ))}
                 </ul>
+
+                <ThemeToggle/>
 
                 {/* Mobile button */}
                 <button

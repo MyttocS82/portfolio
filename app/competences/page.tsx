@@ -14,7 +14,7 @@ export default function SkillsPage() {
             {/* Introduction */}
             <header className="text-center space-y-4">
                 <h1 className="text-3xl font-bold">Compétences</h1>
-                <p className="text-slate-600 max-w-4xl mx-auto">
+                <p className="text-slate-600 max-w-4xl mx-auto dark:text-slate-300">
                     Les compétences présentées ci-dessous s’inscrivent dans le cadre du
                     Programme National du BUT Informatique, parcours{' '}
                     <strong>
@@ -101,7 +101,7 @@ export default function SkillsPage() {
 
             {/* Lien vers projets */}
             <section className="text-center pt-8">
-                <p className="text-slate-600">
+                <p className="text-slate-600 dark:text-slate-300">
                     Ces compétences ont été mobilisées au travers de projets académiques
                     concrets, présentés dans la section{' '}
                     <a

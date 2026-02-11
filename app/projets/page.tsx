@@ -14,7 +14,7 @@ export default function ProjectsPage() {
             {/* Header */}
             <header className="text-center space-y-4">
                 <h1 className="text-3xl font-bold">Projets</h1>
-                <p className="text-gray-600 max-w-4xl mx-auto">
+                <p className="text-gray-600 max-w-4xl mx-auto dark:text-slate-300">
                     Cette page présente une sélection de projets réalisés dans le cadre de
                     mon BUT Informatique et de mes expériences professionnelles.
                     Vous pouvez filtrer les projets selon les compétences mobilisées.
@@ -26,7 +26,7 @@ export default function ProjectsPage() {
 
             {/* Lien compétences */}
             <section className="text-center pt-8">
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-slate-300">
                     Ces projets sont directement liés aux compétences détaillées dans la
                     section{' '}
                     <a
